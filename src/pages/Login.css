@@ -1,0 +1,106 @@
+/* src/pages/Login.css */
+
+/* A. 전체 화면 (375x812) */
+.login-screen {
+  width: 375px;
+  height: 812px;
+  background: #FFFFFF;
+
+  /* 테스트하기 편하게 화면 가운데 오도록 */
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+
+  /* 모든 내용을 세로로, 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  /* 로고랑 폼 사이 간격 */
+  gap: 40px; 
+  padding-top: 130px; /* 로고가 적당히 위에 뜨도록 */
+  
+  box-sizing: border-box; /* 패딩이 크기를 벗어나지 않게 */
+}
+
+/* B. 로고 이미지 영역 */
+.login-logo {
+  /* 행님 코드에서 가져온 값 (image 22) */
+  width: 157px;
+  height: 157px;
+  border-radius: 30px;
+  
+  /* 임시로 배경색 + 텍스트 */
+  background: #FFF0ED; /* 이미지에서 따온 배경색 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  color: #FF6B6B;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* C. 로그인 폼 (아이디, 비번, 버튼 묶음) */
+.login-form {
+  /* 행님 코드에서 가져온 값 (Content) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; /* 인풋과 버튼 사이 간격 */
+}
+
+/* D. 아이디/비밀번호 입력창 */
+.login-input {
+  /* 행님 코드에서 가져온 값 (Field) */
+  box-sizing: border-box;
+  width: 253px;
+  height: 40px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 8px 16px;
+
+  /* 행님 코드에서 가져온 폰트 (Label) */
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+/* D-1. 입력창 안에 보이는 힌트 텍스트 */
+.login-input::placeholder {
+  color: #828282;
+}
+
+/* E. 로그인 버튼 */
+.login-button {
+  /* 행님 코드에서 가져온 값 (Button) */
+  width: 253px;
+  height: 40px;
+  background: #000000;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  /* 행님 코드에서 가져온 폰트 (로그인) */
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  
+  margin-top: 8px; /* 인풋이랑 살짝 더 떨어뜨리기 (24px - 16px) */
+}
+
+/* F. 회원가입 링크 */
+.signup-link {
+  /* 행님 코드에서 가져온 값 (Timestamp) */
+  margin-top: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #828282;
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+.signup-link:hover {
+  text-decoration: underline; /* 마우스 올리면 밑줄 */
+}

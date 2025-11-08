@@ -1,0 +1,120 @@
+/* --- SignUp.css --- */
+
+/* 겉 화면 컨테이너 (폰 크기 + 둥근 모서리 + 배경색) */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  width: 375px; /* 폰 너비 고정 */
+  height: 812px; /* 폰 높이 고정 */
+  margin: 20px auto; /* 화면 가운데 정렬 */
+  border: 1px solid #ccc; /* 구분선 */
+  
+  /* 👇 '겉' 화면 '적당히' 둥글게 (20px) 통일! 👇 */
+  border-radius: 20px; 
+
+  /* --- 나머지 디자인 --- */
+  background: #ffffff;
+  position: relative;
+  overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+  -webkit-overflow-scrolling: touch; /* iOS 스크롤 부드럽게 */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 뒤로가기 버튼 */
+.back-button {
+  position: absolute; /* 절대 위치 */
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10; /* 다른 요소 위에 표시 */
+}
+
+/* 헤더 (제목) */
+.signup-header {
+  text-align: center;
+  margin-top: 10px; /* 뒤로가기 버튼 피해서 */
+  margin-bottom: 20px;
+}
+
+.signup-header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+/* 👇👇👇 '새로운' 이미지 로고 스타일 👇👇👇 */
+.signup-logo-image {
+  display: block; /* 가운데 정렬을 위해 block으로 */
+  width: 120px; /* 이미지 크기 조절 (WelcomeScreen과 비슷하게) */
+  height: 120px;
+  margin: 0 auto 30px auto; /* 위아래 여백, 좌우 자동 (가운데 정렬) */
+  object-fit: contain; /* 이미지 비율 유지 */
+}
+/* 👆👆👆 (스타일 적용 완료!) 👆👆👆 */
+
+/* 입력 그룹 (라벨 + 입력칸) */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block; /* 라벨을 위에, 입력칸을 밑에 */
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
+}
+
+/* 생년월일 입력칸 (3개 가로 정렬) */
+.birthday-inputs,
+.phone-inputs {
+  display: flex;
+  gap: 10px; /* 입력칸 사이 여백 */
+}
+
+.birthday-inputs input,
+.phone-inputs input {
+  flex: 1; /* 남은 공간 균등 분할 */
+}
+
+.phone-inputs input:first-child {
+  flex: 0.5; /* '대한민국 +82' 부분은 좀 짧게 */
+}
+
+
+/* '가입하기' 버튼 (맨 아래 고정) */
+.signup-button-bottom {
+  width: calc(100% - 40px); /* 패딩 20px 제외 */
+  padding: 15px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* 👇👇👇 버튼을 맨 밑에 '고정'시키기 👇👇👇 */
+  position: sticky; /* 스크롤해도 화면 하단에 고정 */
+  bottom: 20px; /* 바닥에서 20px 위 */
+  left: 20px; /* 왼쪽에서 20px */
+  right: 20px; /* 오른쪽에서 20px (width: calc(100% - 40px)랑 조합) */
+  margin-top: 30px; /* 위에 내용이랑 간격 */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* 그림자 */
+  z-index: 10;
+}

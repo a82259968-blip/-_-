@@ -1,0 +1,15 @@
+/* --- Terms.css --- */
+
+/* 'Settings.css'의 대부분 스타일을 재활용함.
+  여기는 Terms 페이지만의 고유한 스타일을 추가.
+*/
+
+.terms-content {
+  background-color: #ffffff; /* 이용약관 페이지는 배경이 흰색 */
+}
+
+.terms-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
